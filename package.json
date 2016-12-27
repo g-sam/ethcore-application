@@ -1,0 +1,73 @@
+{
+  "name": "wizardry",
+  "version": "1.0.0",
+  "description": "Wizardry with Three.js",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint .",
+    "test": "nyc ava --verbose",
+    "dev-client": "webpack-dev-server --content-base public/ --inline",
+    "dev-server": "export NODE_ENV=development && nodemon server.js",
+    "dev": "npm-run-all --parallel dev-server dev-client",
+    "test-watch": "nyc ava --verbose --watch --source ./src/**/**/*.js",
+    "tdd": "npm-run-all --parallel test-watch dev-server dev-client",
+    "precommit": "npm run lint && npm t",
+    "coverage": "nyc check-coverage --lines 95 --functions 95 --branches 95",
+    "report": "nyc report --reporter=html",
+    "start": "node server.js",
+    "postinstall": "webpack --config ./webpack.config.babel.js --progress --colors"
+  },
+  "babel": {
+    "presets": [
+      "latest",
+      "stage-2"
+    ],
+    "env": {
+      "development": {
+        "sourceMaps": "inline"
+      }
+    }
+  },
+  "ava": {
+    "require": [
+      "babel-core/register"
+    ],
+    "babel": "inherit"
+  },
+  "author": "Sam Galson",
+  "license": "ISC",
+  "devDependencies": {
+    "ava": "^0.16.0",
+    "babel-eslint": "^7.1.0",
+    "eslint": "^3.10.2",
+    "eslint-config-airbnb-base": "^10.0.1",
+    "eslint-plugin-import": "^2.2.0",
+    "husky": "^0.11.9",
+    "jsdom": "^9.8.3",
+    "nodemon": "^1.11.0",
+    "npm-run-all": "^3.1.2",
+    "nyc": "^8.4.0",
+    "sinon": "^1.17.6",
+    "webpack-dev-server": "^1.16.2"
+  },
+  "dependencies": {
+    "babel-core": "^6.18.2",
+    "babel-loader": "^6.2.7",
+    "babel-polyfill": "^6.16.0",
+    "babel-preset-latest": "^6.16.0",
+    "babel-preset-stage-2": "^6.17.0",
+    "exports-loader": "^0.6.3",
+    "express": "^4.14.0",
+    "imports-loader": "^0.6.5",
+    "jquery": "^3.1.1",
+    "ramda": "^0.22.1",
+    "three": "^0.83.0",
+    "three-orbit-controls": "^82.1.0",
+    "tween": "^0.9.0",
+    "webpack": "^1.13.3",
+    "whatwg-fetch": "^2.0.1"
+  },
+  "engines": {
+    "node": "6.2.2"
+  }
+}

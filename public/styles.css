@@ -1,0 +1,72 @@
+body {
+  background-color: black;
+  margin: 0;
+  height: 100%;
+  overflow: hidden;
+  font-family: Helvetica, sans-serif;
+}
+
+.level-0 {
+  padding: 30px 30px 30px 30px;
+  background-color: black;
+  color: black;
+  box-shadow: 0px 0px 5px darkgrey;
+  border: 1px solid darkgrey;
+  transition: box-shadow 0.2s ease;
+}
+
+.level-0:hover {
+  box-shadow: 0px 0px 15px white;
+  border: 1px solid white;
+}
+
+.level-1 {
+  font-size: 1.5em;
+  margin: 0.2em 0.2em 0.2em 0.2em;
+  color: lightgrey;
+}
+
+.level-2 {
+  margin: 0.2em 0.2em 0.2em 1em;
+}
+
+.level-0 > .title {
+  color: white;
+  font-size: 2em;
+  text-align: center;
+  margin-bottom: 0.5em;
+  padding-bottom: 0.5em;
+  text-shadow: 0px 0px 15px white;
+  border-bottom: 1px solid white;
+}
+
+.headline {
+  position: absolute;
+  padding: 2em 0.3em 0.3em 2em;
+  background-color: rgba(0,0,0,0.8);
+  font-family: Monospace;
+  font-size: 10px;
+  top: -1.7em;
+  left: -1.7em;
+  color: rgb(102,217,239);
+  border-radius: 0.5em;
+  z-index: 100;
+}
+
+.level-1 > .title {
+  color: rgb(166,226,46);
+}
+
+.boolean {
+  color: rgb(249,38,114);
+}
+
+.number {
+  color: rgb(253,151,31);
+}
+
+.level-2.root > span:first-child:before {
+  color: rgb(166,226,46);
+  content: '> ';
+}
+
