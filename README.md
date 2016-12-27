@@ -1,6 +1,6 @@
 # A demonstration of Javascript wizardry for Ethcore
 
-A simple app that retrieves some data from a server and renders it in 3D.
+A simple app that retrieves some data from a server and renders it in 3D. The data is also processed on the server to split strings without spaces into words.
 
 ## Technologies
 
