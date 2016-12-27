@@ -1,5 +1,7 @@
 # A demonstration of Javascript wizardry for Ethcore
 
+A simple app that retrieves some data from a server and renders it in 3D.
+
 ## Technologies
 
 - ES6 transpiled by Babel and bundled by Webpack.
