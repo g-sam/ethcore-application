@@ -3,7 +3,7 @@ const R = require('ramda');
 const fs = require('fs');
 const path = require('path');
 
-// Word-list from http://norvig.com/ngrams/ with single letters removed
+// Word-list from http://norvig.com/ngrams
 const file = fs.readFileSync(path.join(__dirname, 'words-by-freq.txt'), 'utf8');
 
 const parse = R.compose(
