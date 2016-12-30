@@ -17,6 +17,6 @@ A simple app that retrieves some data from a server and renders it in 3D. The da
 
 Some features of the data recorded in the `data.js` file are ignored by the current implementation:
 - Some data is stored under duplicate keys ("oneof") in the exported variable; only the last instance of the repeated key is incorporated.
-- Some data is stored as arguments to the `enumerate` function. Only the option included in the exported variable is displayed.
+- Some data is stored as arguments to the `enumerate` function; only the option included in the exported variable is incorporated.
 
 These parts of the data were automatically excluded by the variable assignment in the original file, so it seemed natural to ignore them. They might still be considered part of the data, however, so I aim to incorporate them if I get the time.
